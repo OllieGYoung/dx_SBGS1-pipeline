@@ -5,9 +5,9 @@ This pipeline was written as a training component for the diagnostic sequencing 
 Our pipeline takes a directory of paired-end FASTQ files as inputs and outputs annotated VCF files as well as intermediates.
 
 Usage
-Pull all docker dependencies locally: docker-compose up
+##### Pull all docker dependencies locally: docker-compose up #####
 
-Run pipeline: java -jar /path/to/cromwell-xy.jar run wf.wdl -i inputs.json -o options.json
+###### Run pipeline: java -jar /path/to/cromwell-xy.jar run wf.wdl -i inputs.json -o options.json ######
 
 Inputs and outputs
 Outputs can be set to a permanent directory using options.json. Alternatively, ommitting -o options.json sends outputs to the cromwell executions directory.
