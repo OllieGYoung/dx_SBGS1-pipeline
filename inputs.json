@@ -1,0 +1,8 @@
+{
+    "main.fastqs_tar": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv6Y09j4zbyv2VgBZ08JQVp6",
+    "main.adapter_file":"dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv6Ppkj4zbyppp61Vgq5qZx9",
+    "main.fastqcDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv6Z81j4zbygf7FVv5zBjV4G",
+    "main.trimmingDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv6Z9JQ4zbypvVB20gx52q58",
+    "main.multiqcDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv6Z84Q4zbyYfgxy5Bq0JP9G"
+}
+
