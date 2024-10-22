@@ -31,10 +31,10 @@ workflow main {
         String annotatingDocker
 
         ### VEP PLUGINS
-        File caddSnv
-        File caddSnvTbi
-        File caddIndel
-        File caddIndelTbi 
+        File spliceaiSnv
+        File spliceaiSnvTbi
+        File spliceaiIndel
+        File spliceaiIndelTbi
 
     }
 
@@ -109,17 +109,21 @@ workflow main {
         }
     }
 
-# Annotating
-    call annotatingTask.VEP_annotation {
-        input:
-            vcf = vcf,
-            vep_cache = vep_cache,
-            Docker = annotatingDocker
+Array[File] vcf_array = select_all(octopus_caller.vcf_file)
 
-            caddSnv = caddSnv
-            caddSnvTbi = caddSnvTbi
-            caddIndel = caddIndel
-            caddIndelTbi = caddIndelTbi
+# Annotating
+    scatter (vcf in vcf_array) {
+    call annotatingTask.VEP_annotation {
+            input:
+                vcf = vcf,
+                vep_cache = vep_cache,
+                Docker = annotatingDocker,
+                
+                spliceaiSnv = spliceaiSnv,
+                spliceaiSnvTbi = spliceaiSnvTbi,
+                spliceaiIndel = spliceaiIndel,
+                spliceaiIndelTbi = spliceaiIndelTbi
+        }
     }
 
 

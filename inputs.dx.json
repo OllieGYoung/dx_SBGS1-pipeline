@@ -1,6 +1,13 @@
 {
   "stage-common.octopusDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv7yKjj4zbyXp6X7q5xK49pG",
   "stage-common.samDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv7xvJ04zbyk8z33QfqPGGP4",
+  "stage-common.vep_cache": {
+    "$dnanexus_link": {
+      "id": "file-GqzF2P04bQ3P21G7F162xB85",
+      "project": "project-Gp74jGj4zbyz547zj04J3JKz"
+    }
+  },
+  "stage-common.spliceaiSnv": "project-Gp74jGj4zbyz547zj04J3JKz:file-GZK1Fz84fq4QgZ0P23b3bbYQ",
   "stage-common.multiqcDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv6Z84Q4zbyYfgxy5Bq0JP9G",
   "stage-common.fastqcDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv6Z81j4zbygf7FVv5zBjV4G",
   "stage-common.ref_genome_tar": {
@@ -9,6 +16,8 @@
       "project": "project-Gp74jGj4zbyz547zj04J3JKz"
     }
   },
+  "stage-common.spliceaiIndelTbi": "project-Gp74jGj4zbyz547zj04J3JKz:file-GZK277j4fq4z39PX57bqb7Jq",
+  "stage-common.spliceaiIndel": "project-Gp74jGj4zbyz547zj04J3JKz:file-GZK12Kj4fq4xz9pj915j7yZG",
   "stage-common.trimmingDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv6Z9JQ4zbypvVB20gx52q58",
   "stage-common.bamDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv7xvPj4zbyp00fYgpJ2JYKF",
   "stage-common.ref_genome_fa": {
@@ -17,6 +26,8 @@
       "project": "project-Gp74jGj4zbyz547zj04J3JKz"
     }
   },
+  "stage-common.spliceaiSnvTbi": "project-Gp74jGj4zbyz547zj04J3JKz:file-GZK27XQ4fq4zp578zgVPx3Yx",
+  "stage-common.annotatingDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-GvFg2kj4zbyzbBB1gg48p27V",
   "stage-common.adapter_file": {
     "$dnanexus_link": {
       "id": "file-Gv6Ppkj4zbyppp61Vgq5qZx9",

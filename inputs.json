@@ -13,15 +13,10 @@
     "main.octopusDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv7yKjj4zbyXp6X7q5xK49pG",
     "main.annotatingDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-GvFg2kj4zbyzbBB1gg48p27V",
 
-    "main.vep_plugins": [
-        "project-Gp74jGj4zbyz547zj04J3JKz:file-GZK12Kj4fq4xz9pj915j7yZG",
-        "project-Gp74jGj4zbyz547zj04J3JKz:file-GZK12Kj4fq4xz9pj915j7yZG",
-        "project-Gp74jGj4zbyz547zj04J3JKz:file-GZK12Kj4fq4xz9pj915j7yZG",
-        "project-Gp74jGj4zbyz547zj04J3JKz:file-GZK27XQ4fq4zp578zgVPx3Yx"
-    ],
-    "main.plugin_names": [
-        "plugin1"
-    ]
+    
+    "main.spliceaiSnv":"project-Gp74jGj4zbyz547zj04J3JKz:file-GZK1Fz84fq4QgZ0P23b3bbYQ",
+    "main.spliceaiSnvTbi":"project-Gp74jGj4zbyz547zj04J3JKz:file-GZK27XQ4fq4zp578zgVPx3Yx",
+    "main.spliceaiIndel":"project-Gp74jGj4zbyz547zj04J3JKz:file-GZK12Kj4fq4xz9pj915j7yZG",
+    "main.spliceaiIndelTbi":"project-Gp74jGj4zbyz547zj04J3JKz:file-GZK277j4fq4z39PX57bqb7Jq"
 
 }
-
