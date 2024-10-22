@@ -3,11 +3,25 @@
     "main.adapter_file":"dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv6Ppkj4zbyppp61Vgq5qZx9",
     "main.ref_genome_tar": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv8Y7gj4zbyZJjBGG7p7gKK9",
     "main.ref_genome_fa": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv8K9984zbyZJjBGG7p7fkVf",
+    "main.vep_cache": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-GqzF2P04bQ3P21G7F162xB85",
+    
     "main.fastqcDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv6Z81j4zbygf7FVv5zBjV4G",
     "main.trimmingDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv6Z9JQ4zbypvVB20gx52q58",
     "main.multiqcDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv6Z84Q4zbyYfgxy5Bq0JP9G",
     "main.samDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv7xvJ04zbyk8z33QfqPGGP4",
     "main.bamDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv7xvPj4zbyp00fYgpJ2JYKF",
-    "main.octopusDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv7yKjj4zbyXp6X7q5xK49pG"
+    "main.octopusDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-Gv7yKjj4zbyXp6X7q5xK49pG",
+    "main.annotatingDocker": "dx://project-Gp74jGj4zbyz547zj04J3JKz:file-GvFg2kj4zbyzbBB1gg48p27V",
+
+    "main.vep_plugins": [
+        "project-Gp74jGj4zbyz547zj04J3JKz:file-GZK12Kj4fq4xz9pj915j7yZG",
+        "project-Gp74jGj4zbyz547zj04J3JKz:file-GZK12Kj4fq4xz9pj915j7yZG",
+        "project-Gp74jGj4zbyz547zj04J3JKz:file-GZK12Kj4fq4xz9pj915j7yZG",
+        "project-Gp74jGj4zbyz547zj04J3JKz:file-GZK27XQ4fq4zp578zgVPx3Yx"
+    ],
+    "main.plugin_names": [
+        "plugin1"
+    ]
+
 }
 
