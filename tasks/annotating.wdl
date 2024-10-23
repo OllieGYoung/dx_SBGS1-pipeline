@@ -5,12 +5,6 @@ task VEP_annotation {
         File vcf
         File vep_cache
         String Docker
-
-        ### spliceAI
-        File spliceaiSnv       
-        File spliceaiSnvTbi
-        File spliceaiIndel
-        File spliceaiIndelTbi
         
     }
 
@@ -22,12 +16,6 @@ task VEP_annotation {
     # extract vep cache
     tar -xf ~{vep_cache} -C annotation/cache_out
 
-    # Move spliceAI files into plugin directory
-    cp ~{spliceaiSnv} annotation/plugins/
-    cp ~{spliceaiSnvTbi} annotation/plugins/
-    cp ~{spliceaiIndel} annotation/plugins/
-    cp ~{spliceaiIndelTbi} annotation/plugins/
-
     # define basename for annotated VCFs
     BASE_VCF=$(basename ~{vcf} _sorted.vcf)_annotated.vcf 
 
@@ -36,8 +24,7 @@ task VEP_annotation {
         -o annotation/$BASE_VCF \
         --dir_cache annotation/cache_out \
         --cache --offline \
-        --pick \
-        --plugin SpliceAI,snv=annotation/plugins/$(basename ~{spliceaiSnv}),indel=annotation/plugins/$(basename ~{spliceaiIndel})
+        --pick 
     
     >>>
 

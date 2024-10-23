@@ -29,13 +29,6 @@ workflow main {
         String bamDocker
         String octopusDocker
         String annotatingDocker
-
-        ### VEP PLUGINS
-        File spliceaiSnv
-        File spliceaiSnvTbi
-        File spliceaiIndel
-        File spliceaiIndelTbi
-
     }
 
 ############ TASKS ######################
@@ -117,15 +110,9 @@ Array[File] vcf_array = select_all(octopus_caller.vcf_file)
             input:
                 vcf = vcf,
                 vep_cache = vep_cache,
-                Docker = annotatingDocker,
-                
-                spliceaiSnv = spliceaiSnv,
-                spliceaiSnvTbi = spliceaiSnvTbi,
-                spliceaiIndel = spliceaiIndel,
-                spliceaiIndelTbi = spliceaiIndelTbi
+                Docker = annotatingDocker
         }
     }
-
 
 ############ OUTPUTS ######################
 
