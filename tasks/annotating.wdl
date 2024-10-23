@@ -15,8 +15,12 @@ task VEP_annotation {
     mkdir annotation/cache_out
     mkdir annotation/plugins
     
+    ### print contents of tar cache 
+    tar -tvf --no-same-owner ~{vep_cache}
+
     # extract vep cache
-    tar --no-same-owner -xvf ~{vep_cache} -C annotation/cache_out
+    tar --no-same-owner -xf ~{vep_cache} -C annotation/cache_out
+
 
     # define basename for annotated VCFs
     BASE_VCF=$(basename ~{vcf} _sorted.vcf)_annotated.vcf 
@@ -24,7 +28,7 @@ task VEP_annotation {
     #### run vep #####
     vep -i ~{vcf} \
         -o annotation/$BASE_VCF \
-        --dir_cache annotation/cache_out \
+        --dir_cache annotation/cache_out/homo_sapiens_merged \
         --cache --offline \
         --pick 
     
