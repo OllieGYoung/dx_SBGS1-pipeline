@@ -16,7 +16,7 @@ task VEP_annotation {
     mkdir annotation/plugins
     
     # extract vep cache
-    tar -xf ~{vep_cache} -C annotation/cache_out
+    tar --no-same-owner -xvf ~{vep_cache} -C annotation/cache_out
 
     # define basename for annotated VCFs
     BASE_VCF=$(basename ~{vcf} _sorted.vcf)_annotated.vcf 
