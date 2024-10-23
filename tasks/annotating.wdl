@@ -11,7 +11,9 @@ task VEP_annotation {
     command <<<
 
     # temp dirs for output, cache, plugins
-    mkdir annotation/cache_out; mkdir annotation/plugins
+    mkdir annotation
+    mkdir annotation/cache_out
+    mkdir annotation/plugins
     
     # extract vep cache
     tar -xf ~{vep_cache} -C annotation/cache_out
