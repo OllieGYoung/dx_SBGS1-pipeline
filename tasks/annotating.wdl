@@ -13,15 +13,13 @@ task VEP_annotation {
     # temp dirs for output, cache, plugins
     mkdir annotation
     mkdir annotation/cache_out
-    mkdir annotation/plugins
+    mkdir -p annotation/cache_out/homo_sapiens
 
     # extract vep cache
     tar --no-same-owner -xvf ~{vep_cache} -C annotation/cache_out
 
-    # create symlink between homo_sapiens_merged and homo_sapiens
-
-    ln -s annotation/cache_out/homo_sapiens_merged annotation/cache_out/homo_sapiens
-
+   mv annotation/cache_out/homo_sapiens_merged/* annotation/cache_out/homo_sapiens
+   
     # define basename for annotated VCFs
     BASE_VCF=$(basename ~{vcf} _sorted.vcf)_annotated.vcf 
 
