@@ -16,7 +16,7 @@ task VEP_annotation {
     mkdir annotation/plugins
 
     # extract vep cache
-    tar --no-same-owner -xf ~{vep_cache} -C annotation/cache_out
+    tar --no-same-owner -xvf ~{vep_cache} -C annotation/cache_out
 
     # create symlink between homo_sapiens_merged and homo_sapiens
 
