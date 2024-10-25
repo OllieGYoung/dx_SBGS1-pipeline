@@ -8,6 +8,7 @@ import "tasks/fastqc.wdl" as fastqcTask
 import "tasks/multiqc.wdl" as multiqcTask
 import "tasks/aligning.wdl" as alignmentTask
 import "tasks/variant_calling.wdl" as variantCallingTask
+import "tasks/annotating.wdl" as annotatingTask
 
 workflow main {
 
@@ -18,12 +19,16 @@ workflow main {
         File adapter_file
         File ref_genome_tar
         File ref_genome_fa
+        File vep_cache
+
+        ### DOCKERS
         String fastqcDocker
         String trimmingDocker
         String multiqcDocker 
         String samDocker
         String bamDocker
-        String octopusDocker 
+        String octopusDocker
+        String annotatingDocker
     }
 
 ############ TASKS ######################
@@ -95,8 +100,19 @@ workflow main {
                 bai_file = pair.right,
                 Docker = octopusDocker
         }
-    }   
- 
+    }
+
+Array[File] vcf_array = select_all(octopus_caller.vcf_file)
+
+# Annotating
+    scatter (vcf in vcf_array) {
+    call annotatingTask.VEP_annotation {
+            input:
+                vcf = vcf,
+                vep_cache = vep_cache,
+                Docker = annotatingDocker
+        }
+    }
 
 ############ OUTPUTS ######################
 
@@ -104,6 +120,6 @@ workflow main {
         File multiqc_report = multiqc.multiqc_report
         #File multiqc_data = multiqc.multiqc_data
         Array[File] vcf_files = octopus_caller.vcf_file
+        Array[File] annotated_vcfs = VEP_annotation.annotated_vcf
     }
 }
-
