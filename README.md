@@ -1,5 +1,5 @@
 ## DNAnexus variant calling pipeline
-This pipeline was written as a training component for the diagnostic sequencing module of the bioinformatics NHS STP. It runs on [WDL 1.0](https://github.com/openwdl/wdl/blob/main/versions/1.0/SPEC.md) on the [DNAnexus](https://platform.dnanexus.com/login) cloud computing platform. 
+This pipeline was written as a training component for the diagnostic sequencing module of the bioinformatics NHS STP. It runs on [WDL 1.0](https://github.com/openwdl/wdl/blob/main/versions/1.0/SPEC.md) on the [DNAnexus](https://www.dnanexus.com/) cloud computing platform. 
 
 Our pipeline takes a directory of paired-end FASTQ files as inputs and outputs annotated VCF files as well as intermediates. 
 
